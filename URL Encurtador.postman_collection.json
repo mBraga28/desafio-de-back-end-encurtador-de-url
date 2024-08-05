@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "79cd22b7-7e32-4d9d-9ed7-90c2a97771c0",
+		"name": "URL Encurtador",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18225701"
+	},
+	"item": [
+		{
+			"name": "Acessar URL Encurtado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/7094007441",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"7094007441"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estatísticas URL Encurtado Total Geral",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/url-statistics/allTime/7094007441",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"url-statistics",
+						"allTime",
+						"7094007441"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estatísticas URL Encurtado Média por Dia",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/url-statistics/average/7094007441/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"url-statistics",
+						"average",
+						"7094007441",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar URL Encurtado",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"original_url\": \"https://google.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/shorten-url",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shorten-url"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
